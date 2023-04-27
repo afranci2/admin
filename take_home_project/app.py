@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    print(app.template_folder)
+
     conn = psycopg2.connect(
         host=os.getenv("POSTGRES_HOST"),
         port=os.getenv("POSTGRES_PORT"),
@@ -22,6 +24,9 @@ def home():
     cur.close()
     conn.close()
     print(data)
-    return data
+    return render_template("new.html", data=data)
+
+
+
 
 app.run(host='0.0.0.0', port=8888, debug=True)

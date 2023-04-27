@@ -1,6 +1,9 @@
 # syntax=docker/dockerfile:1.4
 FROM ubuntu:22.04
 
+VOLUME /app/templates
+
+
 # Install OS-level packages
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
