@@ -12,7 +12,7 @@ def home():
         host=os.getenv("POSTGRES_HOST"),
         port=os.getenv("POSTGRES_PORT"),
         dbname=os.getenv("POSTGRES_DB"),
-        user=os.getenv("POSTGRES_USER"),
+        user=os.getenv("POSTGRES_USE"),
         password=os.getenv("POSTGRES_PASSWORD")
     )
     print("Everything connected")
@@ -23,7 +23,6 @@ def home():
     data = cur.fetchall()
     cur.close()
     conn.close()
-    print(data)
     return render_template("new.html", data=data)
 
 
