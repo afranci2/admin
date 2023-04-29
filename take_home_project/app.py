@@ -23,7 +23,7 @@ def home():
     data = cur.fetchall()
     cur.close()
     conn.close()
-    return render_template("new.html", data=data)
+    return render_template("my_templates/new.html", data=data)
 
 
 
