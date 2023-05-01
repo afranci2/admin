@@ -20,5 +20,5 @@ setup(
     author='Anthony Francisco',
     author_email='anthony.francisco.aoct@gmail.com',
     description='Anthony Take Home',
-    url='https://github.com/afrnci2',
+    url='https://github.com/afranci2',
 )
